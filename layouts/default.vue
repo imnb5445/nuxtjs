@@ -27,7 +27,8 @@
     }
 
     .nav-bar{
-        position: fixed;
+        z-index: 1;
+        position: fixed !important;
         margin-top: -1rem;
         margin-left: -1rem;
         width: 100%;
