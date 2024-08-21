@@ -1,5 +1,6 @@
 <template> 
-  <div class="hero">
+<section class="hero">
+  <!-- <div class="hero"> -->
     <div class="hero-cover">
         <div class="hero-item-container">
             <h1 class="hero-title">LOREM IMPSUM</h1>
@@ -7,7 +8,9 @@
             <button class="hero-button">Lorem</button>
         </div>
     </div>
-  </div>
+  <!-- </div> -->
+</section>
+
 </template>
 
 <script >
@@ -15,6 +18,9 @@
 </script>
 
 <style>
+
+
+
    .hero{
     width: 200%;
     height: 120vh;
@@ -42,5 +48,24 @@
     width: 30rem;
     color: white;
    }
+
+   .hero-button{
+    border: 0;
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 10px;
+    background-color: white;
+    font-weight: 500;
+    font-weight: bold;
+    font-size: larger;
+    color: rgb(17, 17, 77);
+   }
+
+   .hero-button:hover{
+    color: white;
+    background-color: rgb(17, 17, 77);
+   }
+
+  
 
 </style>

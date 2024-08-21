@@ -6,9 +6,7 @@
 </template>
 
 <script>
-export default {
-  // Konten logika komponen
-}
+
 </script>
 
 <style>

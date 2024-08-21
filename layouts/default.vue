@@ -3,6 +3,7 @@
     <header>
         <div class="nav-bar">
             <NuxtLink class="nav-item" to="/">Home</NuxtLink>
+            <NuxtLink class="nav-item" to="/product">Product</NuxtLink>
             <NuxtLink class="nav-item" to="/tentang">About Us</NuxtLink>
         </div>
     </header>
@@ -21,6 +22,7 @@
         padding-top: 5rem;
         padding-left: 1rem;
         padding-right: 1rem;
+        /* background-color: black; */
         display: flex;
         justify-content: center;
         overflow-x: hidden;
