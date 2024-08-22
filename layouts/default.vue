@@ -1,51 +1,33 @@
 <template>
 <div>
-    <header>
+    <!-- <header>
         <div class="nav-bar">
             <NuxtLink class="nav-item" to="/">Home</NuxtLink>
             <NuxtLink class="nav-item" to="/product">Product</NuxtLink>
             <NuxtLink class="nav-item" to="/tentang">About Us</NuxtLink>
         </div>
-    </header>
+    </header> -->
+    <AppHeader />
     <main>
         <slot />
     </main>
     
-    <footer>
-        
-    </footer>
+    <AppFooter />
 </div>
 </template>
 
 <style>
+   body{
+        background-color: black;
+    }
+
     main{
         padding-top: 5rem;
         padding-left: 1rem;
         padding-right: 1rem;
-        /* background-color: black; */
         display: flex;
+        flex-direction: column;
         justify-content: center;
         overflow-x: hidden;
-    }
-
-    .nav-bar{
-        z-index: 1;
-        position: fixed !important;
-        margin-top: -1rem;
-        margin-left: -1rem;
-        width: 100%;
-        height: 3rem;
-        padding: 1rem;
-        background-color: black;
-        display: flex;
-    }
-
-    .nav-item{
-        margin-right: 1rem;
-        margin-left: 1rem;
-        margin-top: 0.5rem;
-        font-size: 1.5rem;
-        color: white;
-        text-decoration: none;
     }
 </style>

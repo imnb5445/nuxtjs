@@ -32,7 +32,6 @@
         height: 50rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        background-color: rgb(27, 27, 81);
         display: flex;
         justify-content: center;
         flex-direction: row;
