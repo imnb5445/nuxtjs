@@ -19,6 +19,7 @@
 <style>
    body{
         background-color: black;
+        overflow-x: hidden;
     }
 
     main{
