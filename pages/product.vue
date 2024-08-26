@@ -5,24 +5,16 @@
             <hr width="70%" size="2">
             <p class="product-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloremque repudiandae provident dicta eligendi corrupti aspernatur similique, exercitationem, aliquid odit vero quod, ut commodi veniam atque aut dolorum et cum?</p>
         </div>
-            <!-- <div class="product-expanded">
-                <h5 class="product-title">Lorem</h5>
-                <hr width="70%" size="2">
-                <p class="product-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloremque repudiandae provident dicta eligendi corrupti aspernatur similique, exercitationem, aliquid odit vero quod, ut commodi veniam atque aut dolorum et cum?</p>
-            </div> -->
-       
         <div class="product-normal">
             <h5 class="product-title">Lorem</h5>
             <hr width="70%" size="2">
             <p class="product-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloremque repudiandae provident dicta eligendi corrupti aspernatur similique, exercitationem, aliquid odit vero quod, ut commodi veniam atque aut dolorum et cum?</p>
         </div>
-        
         <div class="product-normal">
             <h5 class="product-title">Lorem</h5>
             <hr width="70%" size="2">
             <p class="product-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloremque repudiandae provident dicta eligendi corrupti aspernatur similique, exercitationem, aliquid odit vero quod, ut commodi veniam atque aut dolorum et cum?</p>
         </div>
-            
     </section>
 </template>
 
