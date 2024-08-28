@@ -16,12 +16,96 @@
             <p class="product-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloremque repudiandae provident dicta eligendi corrupti aspernatur similique, exercitationem, aliquid odit vero quod, ut commodi veniam atque aut dolorum et cum?</p>
         </div>
     </section>
+
+    <section class="best-deal">
+        <div class="deal-container">
+            <div class="price-container">
+              <p class="price">500$</p>
+            </div>
+        </div>
+        <div class="deal-container">
+            <div class="price-container">
+              <p class="price">500$</p>
+            </div>
+        </div>
+        <div class="deal-container">
+            <div class="price-container">
+              <p class="price">500$</p>
+            </div>
+        </div>
+        <div class="deal-container">
+            <div class="price-container">
+              <p class="price">500$</p>
+            </div>
+        </div>
+        <div class="deal-container">
+            <div class="price-container">
+              <p class="price">500$</p>
+            </div>
+        </div>
+        <div class="deal-container">
+            <div class="price-container">
+              <p class="price">500$</p>
+            </div>
+        </div>
+        <div class="deal-container">
+            <div class="price-container">
+              <p class="price">500$</p>
+            </div>
+        </div>
+        <div class="deal-container">
+            <div class="price-container">
+              <p class="price">500$</p>
+            </div>
+        </div>
+
+    </section>
 </template>
 
 <style>
+    .best-deal{
+        width: 80%;
+        margin: 3rem;
+        display: flex;
+        justify-content: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        
+    }
+
+    .best-deal::-webkit-scrollbar{
+        display: none;
+    }
+    .deal-container{
+        width: 130px;
+        min-width: 17rem;
+        height: 11rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        border-radius: 20px 20px 0 0;
+        background-size: cover;
+        background-image: url("~/assets/hero-background.png");
+        align-content: end;
+        
+        
+    }
+
+    .price-container{
+        width: 40%;
+        height: 1rem;
+        border-radius: 0 10px 0 0;
+        background-color: aqua;
+    }
+    
+
+
+
+
+
+
     .product{
         width: 100%;
-        height: 50rem;
+        height: 25rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
         display: flex;

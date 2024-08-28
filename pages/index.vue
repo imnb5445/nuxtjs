@@ -1,6 +1,5 @@
 <template> 
 <section class="hero">
-  <!-- <div class="hero"> -->
     <div class="hero-cover">
         <div class="hero-item-container">
             <h1 class="hero-title">LOREM IMPSUM</h1>
@@ -8,7 +7,6 @@
             <button class="hero-button">Lorem</button>
         </div>
     </div>
-  <!-- </div> -->
 </section>
 
 </template>
@@ -18,11 +16,8 @@
 </script>
 
 <style>
-
-
-
    .hero{
-    width: 200%;
+    width: 100%;
     height: 120vh;
     margin-top: -2.5rem;
     background-image: url("~/assets/hero-background.png");
@@ -59,11 +54,13 @@
     font-weight: bold;
     font-size: larger;
     color: rgb(17, 17, 77);
+    transition: 200ms ease-in-out;
    }
 
    .hero-button:hover{
     color: white;
     background-color: rgb(17, 17, 77);
+    transform: scale(1.2);
    }
 
   
