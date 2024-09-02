@@ -9,9 +9,9 @@
             </div>
            
             <div v-if="user" class="user-container">
-                <img class="user-profile":src="profile"/>
+                <img class="user-profile" :src="profile"/>
                 <div class="username-container">
-                    <div class="username">{{ name }}</div>
+                <div class="username">{{ name }}</div>
                 </div>
             <form @submit.prevent="logout">
                <button type="submit" class="logout-button">Logout</button>
@@ -31,10 +31,10 @@
     var signInHidden = ref("block");
 
     const name = computed(
-    () => user?.value.user_metadata.full_name
+    () => user?.value?.user_metadata.full_name
     );
     const profile = computed(
-    () => user?.value.user_metadata.avatar_url
+    () => user?.value?.user_metadata.avatar_url
     );
 
     if(login == "true"){
