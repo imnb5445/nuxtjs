@@ -11,11 +11,13 @@ export default defineNuxtConfig({
     public: {
       login: process.env.LOGIN,
       test: process.env.TEST_VAR,
-    }
+    },
+     supaBase_Url: process.env.SUPABASE_URL,
+     supaBase_Key: process.env.SUPABASE_KEY,
     
   },
 
-  compatibilityDate: '2024-08-21',
+
 
   modules: ['@nuxtjs/supabase'],
  
