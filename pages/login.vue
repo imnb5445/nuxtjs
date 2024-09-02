@@ -19,7 +19,7 @@
         <!-- login with github button -->
         <form @submit.prevent="login_github">
           <label for="github-submit"></label>
-          <button type="submit" id="github-submit" class="logbutton github-button"></button>
+          <button type="submit" id="github-submit" class="logbutton github-button" onclick="config.public.login = 'true'"></button>
         </form>
 
         <form @submit.prevent="login_github">
@@ -42,8 +42,11 @@
     </div>
 </template>
 <script setup lang="ts">
+  const config = useRuntimeConfig();
   const supabase = useSupabaseClient();
   const email = ref('')
+  
+
 
   // LOGIN WITH EMAIL Function(WONT WORK)
   // const login_email = async () => {
@@ -62,6 +65,7 @@
       console.error(error);
     }
     else{
+      config.public.login = "true"
       await  navigateTo("/")
     }
   }

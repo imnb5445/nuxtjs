@@ -24,8 +24,6 @@
 
     main{
         padding-top: 5rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;

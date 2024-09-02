@@ -92,6 +92,8 @@
     width: 3rem;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
+    filter: invert(0.9);
+
   }
 
   .footer-text-container{

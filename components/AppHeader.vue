@@ -5,6 +5,7 @@
                 <NuxtLink class="nav-item" to="/">Home</NuxtLink>
                 <NuxtLink class="nav-item" to="/product">Product</NuxtLink>
                 <NuxtLink class="nav-item" to="/tentang">About Us</NuxtLink>
+                <p class="nav-item"> {{ $config.public.login }}</p>
             </div>
            
             <div v-if="user" class="user-container">
@@ -22,8 +23,11 @@
 </template>
 
 <script setup lang="ts">
+    const config = useRuntimeConfig()
+    console.log(config.myPublicVariable)
     const user = useSupabaseUser();
     const supabase = useSupabaseClient();
+    const login = config.public.login
     var signInHidden = ref("block");
 
     const name = computed(
@@ -33,18 +37,17 @@
     () => user?.value.user_metadata.avatar_url
     );
 
-    // trying to make the sign in link disappear when you are log in but i dont know what tu use for the comparison
-    // if(name !== null){
-    //     signInHidden =  ref("block");.                                                                                                                                            
-    // }
+    if(login == "true"){
+        signInHidden =  ref("none");                                                                                                                                          
+    }
 
-    // else{
-    //     signInHidden = ref("none");
-    // }
+    else{
+        signInHidden = ref("block");
+    }
 
     const logout = async () => {
     const { error } = await supabase.auth.signOut();
-
+    config.public.login = "true"
      if (error) {
     console.error(error);
     return;
@@ -106,5 +109,10 @@
         font-size: 1.5rem;
         color: white;
         text-decoration: none;
+    }
+
+    .nav-item:hover{
+        text-decoration-line: underline;
+        text-decoration-style: solid;
     }
 </style>

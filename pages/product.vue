@@ -1,3 +1,23 @@
+<script setup>
+const supabase = useSupabaseClient()
+const products = ref([])
+
+async function productTest() {
+  const { data } = await supabase.from('tb-produk').select()
+  products.value = data
+
+  
+}
+
+
+onMounted(() => {
+  productTest()
+})
+</script>
+
+
+
+
 <template>
     <section class="product">
         <div class="product-normal">
@@ -18,62 +38,40 @@
     </section>
 
     <section class="best-deal">
-        <div class="deal-container">
+    <div class="best-deal-container">
+        <div class="carosel-fading-left">
+             
+        </div>
+        <div class="deal-container" v-for="product in products" :key="product.produk_id">
             <div class="price-container">
-              <p class="price">500$</p>
+              <p class="deal-name"> {{ product.nama_produk }} {{ product.harga }}$</p>
             </div>
         </div>
-        <div class="deal-container">
-            <div class="price-container">
-              <p class="price">500$</p>
-            </div>
-        </div>
-        <div class="deal-container">
-            <div class="price-container">
-              <p class="price">500$</p>
-            </div>
-        </div>
-        <div class="deal-container">
-            <div class="price-container">
-              <p class="price">500$</p>
-            </div>
-        </div>
-        <div class="deal-container">
-            <div class="price-container">
-              <p class="price">500$</p>
-            </div>
-        </div>
-        <div class="deal-container">
-            <div class="price-container">
-              <p class="price">500$</p>
-            </div>
-        </div>
-        <div class="deal-container">
-            <div class="price-container">
-              <p class="price">500$</p>
-            </div>
-        </div>
-        <div class="deal-container">
-            <div class="price-container">
-              <p class="price">500$</p>
-            </div>
-        </div>
-
+        <div class="carosel-fading-right"></div>
+    </div>
     </section>
+        
 </template>
 
 <style>
     .best-deal{
-        width: 80%;
-        margin: 3rem;
+        width: 70%;
         display: flex;
         justify-content: center;
+    }
+    .best-deal-container{
+        width: 100%;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: baseline;
         overflow-x: scroll;
         overflow-y: hidden;
         
     }
 
-    .best-deal::-webkit-scrollbar{
+    .best-deal-container::-webkit-scrollbar{
         display: none;
     }
     .deal-container{
@@ -91,11 +89,56 @@
     }
 
     .price-container{
-        width: 40%;
+        width: 80%;
         height: 1rem;
         border-radius: 0 10px 0 0;
         background-color: aqua;
     }
+
+    .carosel-fading-left{
+        height: 12rem;
+        width: 8%;
+        position: absolute;
+        left: 10%;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgb(0, 0, 0) 70%, rgba(230,207,207,0) 100%);
+        z-index: 1;
+    }
+
+    .carosel-fading-right{
+        height: 12rem;
+        width: 10%;
+        position: absolute;
+        right: 8%;
+        background: rgb(2,0,36);
+        background: linear-gradient(270deg, rgb(0, 0, 0) 70%, rgba(230, 207, 207, 0) 100%);
+        z-index: 1;
+    }
+
+    /* .deal-container::before,
+    .deal-container::after{
+        content: "";
+
+        position: absolute;
+        z-index: 1;
+        width: 10px;
+        top: 0;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .deal-container::before{
+        left: 0;
+        background: linear-gradient(to right, rgb(231, 16, 16), rgba(0, 0, 0, 0));
+    }
+
+    .deal-container::after{
+        right: 0;
+        background: linear-gradient(to left, rgb(244, 13, 13), rgba(0, 0, 0, 0));
+    } */
+
+   
+    
     
 
 
