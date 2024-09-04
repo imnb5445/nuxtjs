@@ -22,9 +22,9 @@
           <button type="submit" id="github-submit" class="logbutton github-button" onclick="config.public.login = 'true'"></button>
         </form>
 
-        <form @submit.prevent="login_github">
+        <form @submit.prevent="login_google">
           <label for="github-submit"></label>
-          <button type="submit" id="github-submit" class="logbutton"></button>
+          <button type="submit" class="logbutton google-button"></button>
         </form>
 
         <form @submit.prevent="login_github">
@@ -46,16 +46,6 @@
   const supabase = useSupabaseClient();
   const email = ref('')
   
-
-
-  // LOGIN WITH EMAIL Function(WONT WORK)
-  // const login_email = async () => {
-  //   await supabase.auth.signInWithOtp({
-  //     email: email.value,
-  //   });
-  // }
-
-  // login with github fiunction
   const login_github = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'github',
@@ -69,6 +59,20 @@
       await  navigateTo("/")
     }
   }
+  const login_google = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+    });
+
+    if (error) {
+      console.error(error);
+    }
+    else{
+      config.public.login = "true"
+      await  navigateTo("/")
+    }
+  }
+
 
   
 </script>
@@ -129,6 +133,10 @@
       background-position: center;
     
       
+    }
+
+    .google-button{
+      background-color: red;
     }
 
     .logbutton:hover{
