@@ -32,7 +32,9 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/supabase'],
  
   supabase: {
-    redirect: false
+    redirect: false,
+    key: process.env.SUPABASE_KEY,
+    url: process.env.SUPABASE_URL
   }
 
   
