@@ -136,7 +136,9 @@
     }
 
     .google-button{
-      background-color: red;
+      background-image: url("~/assets/google.png");
+      background-size: cover;
+      background-position: center;
     }
 
     .logbutton:hover{
