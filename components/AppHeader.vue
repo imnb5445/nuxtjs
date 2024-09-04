@@ -88,7 +88,7 @@
      
 
     .nav-bar{
-        z-index: 1;
+        z-index: 2;
         position: fixed;
         margin-top: -1rem;
         margin-left: -1rem;
