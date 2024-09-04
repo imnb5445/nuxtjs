@@ -14,7 +14,7 @@
                 <div class="username">{{ name }}</div>
                 </div>
             <form @submit.prevent="logout">
-               <button type="submit" class="logout-button">Logout</button>
+               <button type="submit" class="logout-button" onclick="config.public.login = 'false'">Logout</button>
             </form>
             </div>
             <NuxtLink class="nav-item signIn" to="/login">Sign In</NuxtLink>

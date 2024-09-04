@@ -11,8 +11,8 @@ export default defineNuxtConfig({
     public: {
       login: process.env.LOGIN,
       test: process.env.TEST_VAR,
-      supaBase_Url: "https://ehkuhspixiclvrzyeshh.supabase.co",
-      supaBase_Key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVoa3Voc3BpeGljbHZyenllc2hoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ2Mzc1NjQsImV4cCI6MjA0MDIxMzU2NH0.K3AXi_1QZ61ZIWkay4TM98kxHLq6rTYDJ7k2gNjvjT8",
+      // supaBase_Url: "https://ehkuhspixiclvrzyeshh.supabase.co",
+      // supaBase_Key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVoa3Voc3BpeGljbHZyenllc2hoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ2Mzc1NjQsImV4cCI6MjA0MDIxMzU2NH0.K3AXi_1QZ61ZIWkay4TM98kxHLq6rTYDJ7k2gNjvjT8",
 
       
      
@@ -33,8 +33,8 @@ export default defineNuxtConfig({
  
   supabase: {
     redirect: false,
-    key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVoa3Voc3BpeGljbHZyenllc2hoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ2Mzc1NjQsImV4cCI6MjA0MDIxMzU2NH0.K3AXi_1QZ61ZIWkay4TM98kxHLq6rTYDJ7k2gNjvjT8",
-    url: "https://ehkuhspixiclvrzyeshh.supabase.co",
+    // key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVoa3Voc3BpeGljbHZyenllc2hoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ2Mzc1NjQsImV4cCI6MjA0MDIxMzU2NH0.K3AXi_1QZ61ZIWkay4TM98kxHLq6rTYDJ7k2gNjvjT8",
+    // url: "https://ehkuhspixiclvrzyeshh.supabase.co",
   }
 
   
